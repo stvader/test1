@@ -39,6 +39,13 @@ input {
   font-style: normal;
 }
 @font-face {
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/Open-Sans-Bold.eot');
+  src: url('../fonts/Open-Sans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans-Bold.woff2') format('woff2'), url('../fonts/Open-Sans-Bold.woff') format('woff'), url('../fonts/Open-Sans-Bold.ttf') format('truetype'), url('../fonts/Open-Sans-Bold.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Noto Serif';
   src: url('../fonts/Noto-Serif.eot');
   src: url('../fonts/Noto-Serif.eot?#iefix') format('embedded-opentype'), url('../fonts/Noto-Serif.woff2') format('woff2'), url('../fonts/Noto-Serif.woff') format('woff'), url('../fonts/Noto-Serif.ttf') format('truetype'), url('../fonts/Noto-Serif.svg#NotoSerif') format('svg');
@@ -50,8 +57,8 @@ input {
   padding: 0;
   font-family: 'Open Sans';
   font-weight: bold;
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 14px;
+  line-height: 17px;
   color: #434242;
   display: inline-block;
   width: 225px;
@@ -62,6 +69,8 @@ input {
   vertical-align: top;
   box-sizing: border-box;
   text-transform: uppercase;
+  letter-spacing: 0.3em;
+  cursor: pointer;
 }
 .page-footer {
   width: 100%;
@@ -72,6 +81,9 @@ input {
   box-sizing: border-box;
   vertical-align: top;
   background-color: #3a3a3a;
+  background-image: url("../../img/footer-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
 }
 .page-footer:before,
@@ -87,8 +99,8 @@ input {
   padding: 0;
   font-family: 'Noto Serif';
   font-weight: normal;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 50px;
+  line-height: 60px;
   color: #ffffff;
   padding-bottom: 30px;
 }
@@ -97,7 +109,7 @@ input {
   padding: 0;
   font-family: 'Noto Serif';
   font-weight: normal;
-  font-size: 20px;
+  font-size: 26px;
   line-height: 20px;
   color: #ffffff;
   padding-bottom: 100px;
@@ -111,15 +123,46 @@ input {
   font-family: 'Open Sans';
   font-weight: normal;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 30px;
   color: #ffffff;
   display: inline-block;
   width: 525px;
   height: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
   border: none;
   outline: none;
   box-sizing: border-box;
-  background-color: rgba(70, 70, 70, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.form-text-input:focus,
+.form-text-input:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.form-text-input:invalid {
+  background-color: rgba(223, 126, 126, 0.4);
+}
+.main-nav {
+  width: 100%;
+  background-color: grey;
+  text-align: center;
+}
+.main-nav__list {
+  display: block;
+  list-style: none;
+}
+.main-nav__list--language {
+  float: right;
+}
+.main-nav__item {
+  display: inline-block;
+}
+.main-nav__link {
+  font-family: 'Open Sans Bold';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  text-transform: uppercase;
 }

@@ -10,16 +10,19 @@
 	vertical-align: top;
 
 	background-color: @grey;
+	background-image: url("../../img/footer-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 	text-align: center;
 
 }
 
-.footer__header {//check lh and fz
+.footer__header {
 	.out-paddings();
 	.fonts(@family: 'Noto Serif'; 
 		@weight: normal; 
-		@size: 40px; 
-		@line-height: 40px; 
+		@size: 50px; 
+		@line-height: 60px; 
 		@color: @white);
 
 	padding-bottom: 30px;
@@ -29,7 +32,7 @@
 	.out-paddings();
 	.fonts(@family: 'Noto Serif'; 
 		@weight: normal; 
-		@size: 20px; 
+		@size: 26px; 
 		@line-height: 20px; 
 		@color: @white);
 
@@ -45,18 +48,28 @@
 	.fonts(@family: 'Open Sans'; 
 		@weight: normal; 
 		@size: 18px; 
-		@line-height: 20px; 
+		@line-height: 30px; 
 		@color: @white);
 
 	display: inline-block;
 	width: 525px;
 	height: 40px;
-	padding-left: 40px;//check!!!
-	padding-right: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
 	border: none;
 	outline: none;
 	box-sizing: border-box;
-	background-color: @inpul-field-bgc-def;
-	
+	background-color: @input-field-bgc-def;
+
+	&:focus,
+	&:active {
+		background-color: @input-field-bgc-write;
+	}
+
+	&:invalid {
+		background-color: @input-field-bgc-invalid;
+	}
 }
+
+
 

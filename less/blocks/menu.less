@@ -1,0 +1,30 @@
+.main-nav {
+	width: 100%;
+	background-color: grey;
+	text-align: center;
+}
+
+.main-nav__list {
+	display: block;
+	list-style: none;
+
+	&--language {
+		float: right;
+	}
+}
+
+.main-nav__item {
+	display: inline-block;
+}
+
+.main-nav__link {
+	.fonts(@family: 'Open Sans Bold'; 
+		@weight: normal; 
+		@size: 14px; 
+		@line-height: 36px; 
+		@color: @white-op-60);
+
+	text-decoration: none;
+	text-transform: uppercase;
+}
+

@@ -1,0 +1,60 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.container(@paddings) {
+	width: 320px;
+	margin: 0 auto;
+
+	padding-right: @paddings;
+	padding-left: @paddings;
+
+	box-sizing: border-box;	
+}
+
+.container-fluid(@paddings) {
+	padding-left: @paddings;
+	padding-right: @paddings;
+	margin-right: auto;
+  	margin-left: auto;
+  	box-sizing: border-box;
+}
+
+.row(@paddings) {
+	padding-right: @paddings;
+	padding-left: @paddings;
+}
+
+.out-paddings() {
+	margin: 0;
+	padding: 0;
+}
+
+.fonts(@family; @weight: normal; @size; @line-height; @color: @black) {
+	font-family: @family;
+	font-weight: @weight;
+	font-size: @size;
+	line-height: @line-height;
+	color: @color;
+}
+
+
+
+/**
+ * @src      The path to your SVG file
+ * @fill-new The fill value you would like to have injected into your paths
+ */
+.icon-add-fill(@src, @fill-new) {
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @replace-default: escape('<path ');
+  @replace-new: escape('<path fill="@{fill-new}" ');
+  @replace-src: replace("@{data-uri}", @replace-default, @replace-new, "g");
+  background-image: e(@replace-src);
+};

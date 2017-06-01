@@ -1,0 +1,125 @@
+/**
+ * @src      The path to your SVG file
+ * @fill-new The fill value you would like to have injected into your paths
+ */
+@font-face {
+  font-family: OpenSansBold;
+  src: url(../fonts/opensansbold.woff2);
+}
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/opensans.woff2);
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #000000;
+  min-width: 320px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+picture {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-style: none;
+}
+input {
+  outline: none;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/Open-Sans.eot');
+  src: url('../fonts/Open-Sans.eot?#iefix') format('embedded-opentype'), url('../fonts/Open-Sans.woff2') format('woff2'), url('../fonts/Open-Sans.woff') format('woff'), url('../fonts/Open-Sans.ttf') format('truetype'), url('../fonts/Open-Sans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('../fonts/Noto-Serif.eot');
+  src: url('../fonts/Noto-Serif.eot?#iefix') format('embedded-opentype'), url('../fonts/Noto-Serif.woff2') format('woff2'), url('../fonts/Noto-Serif.woff') format('woff'), url('../fonts/Noto-Serif.ttf') format('truetype'), url('../fonts/Noto-Serif.svg#NotoSerif') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.btn {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 10px;
+  color: #434242;
+  display: inline-block;
+  width: 225px;
+  height: 40px;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  vertical-align: top;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+.page-footer {
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 90px;
+  padding-right: 90px;
+  box-sizing: border-box;
+  vertical-align: top;
+  background-color: #3a3a3a;
+  text-align: center;
+}
+.page-footer:before,
+.page-footer:after {
+  content: " ";
+  display: table;
+}
+.page-footer:after {
+  clear: both;
+}
+.footer__header {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Serif';
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  padding-bottom: 30px;
+}
+.footer__info {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Serif';
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  padding-bottom: 100px;
+}
+.footer__form {
+  font-size: 0;
+}
+.form-text-input {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+  display: inline-block;
+  width: 525px;
+  height: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  background-color: rgba(70, 70, 70, 0.4);
+}

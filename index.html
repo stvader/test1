@@ -53,6 +53,7 @@
 		<div class="slider">
 			<div class="slider__wrapper js-slid">
 				<div class="slider__item slider__item--one">
+
 					<div class="slider__item-text-block">
 						<h2 class="slider__item-header">
 							Аниматронные модели и выставки
@@ -62,15 +63,28 @@
 						</p>
 						<div class="slider__btn-block">
 							<a href="" class="slider__btn slider__btn--know-more btn">
-								Узнать больше
+								<span class="btn-default">
+									Узнать больше
+								</span>
+								<span class="btn-hover">
+									<img src="img/right-arrow-white.png" alt="Know more" class="btn-img">
+								</span>
 							</a>
 							<a href="" class="slider__btn slider__btn--order btn">
-								Заказать
+								<span class="btn-default">
+									Заказать
+								</span>
+								<span class="btn-hover">
+									<img src="img/btn-order-hover.png" alt="Order" class="btn-img">
+								</span>
 							</a>
 						</div>
 					</div>
 					<div class="slider__picture">
-						<img src="img/" alt="" class="slider__image">
+						<img src="img/dino-main.png" alt="dino" class="slider__image">
+					</div>
+					<div class="slider__picture slider__picture--over">
+						<img src="img/dino-paws.png" alt="dino" class="slider__image">
 					</div>
 				</div>
 				<div class="slider__item slider__item--two">
@@ -83,15 +97,25 @@
 						</p>
 						<div class="slider__btn-block">
 							<a href="" class="slider__btn slider__btn--know-more btn">
-								Узнать больше
+								<span class="btn-default">
+									Узнать больше
+								</span>	
+								<span class="btn-hover">
+									<img src="img/right-arrow-white.png" alt="Know more" class="btn-img">
+								</span>							
 							</a>
 							<a href="" class="slider__btn slider__btn--order btn">
-								Заказать
+								<span class="btn-default">
+									Заказать
+								</span>
+								<span class="btn-hover">
+									<img src="img/btn-order-hover-white.png" alt="Order" class="btn-img">
+								</span>
 							</a>
 						</div>
 					</div>
 					<div class="slider__picture">
-						<img src="img/" alt="" class="slider__image">
+						<img src="img/arm-chair.png" alt="" class="slider__image">
 					</div>
 				</div>
 				<div class="slider__item slider__item--three">
@@ -104,22 +128,32 @@
 						</p>
 						<div class="slider__btn-block">
 							<a href="" class="slider__btn slider__btn--know-more btn">
-								Узнать больше
+								<span class="btn-default">
+									Узнать больше
+								</span>
+								<span class="btn-hover">
+									<img src="img/right-arrow-white.png" alt="Know more" class="btn-img">
+								</span>
 							</a>
 							<a href="" class="slider__btn slider__btn--order btn">
-								Заказать
+								<span class="btn-default">
+									Заказать
+								</span>
+								<span class="btn-hover">
+									<img src="img/btn-order-hover.png" alt="Order" class="btn-img">
+								</span>
 							</a>
 						</div>
 					</div>
 					<div class="slider__picture">
-						<img src="img/" alt="" class="slider__image">
+						<img src="img/chidren.png" alt="" class="slider__image">
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<sector class="page-product">
+	<section class="page-product">
 		<h2 class="product__header">
 			Продукты
 		</h2>
@@ -338,9 +372,9 @@
 				</li>
 			</ul>
 		</div>
-	</sector>
+	</section>
 
-	<footer class="page-subscription">
+	<section class="page-subscription">
 		<h2 class="subscription__header">
 			Хотите первыми узнавать о новостях и скидках?
 		</h2>
@@ -350,9 +384,19 @@
 		<div class="subscription__form">
 			<form action="#">
 				<input type="email" class="form-text-input">
-				<input type="submit" class="form-submit btn" value="Отправить">
+				<button type="submit" class="form-submit btn">
+					<span class="btn-default">
+						Отправить
+					</span>
+					<span class="btn-hover">
+						<img src="img/send.png" alt="Send" class="btn-img">
+					</span>
+					<span class="btn-error">
+						<img src="img/X-red.png" alt="Error" class="btn-img">
+					</span>
+				</button>
 			</form>
 		</div>
-	</footer>
+	</section>
 </body>
 </html>

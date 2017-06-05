@@ -10,7 +10,7 @@
 	vertical-align: top;
 
 	background-color: @grey;
-	background-image: url("../../img/footer-bg.jpg");
+	background-image: url("../img/footer-bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
@@ -68,6 +68,16 @@
 
 	&:invalid {
 		background-color: @input-field-bgc-invalid;
+	}
+}
+
+.form-text-input:invalid + .form-submit {
+	.btn-default {
+		display: none;
+	}
+
+	.btn-error {
+		display: inline-block;
 	}
 }
 

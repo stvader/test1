@@ -7,8 +7,10 @@
 		@color: @grey-font);
 
 	display: inline-block;
-	width: 225px;
+	width: 220px;
 	height: 40px;
+	-padding-top: 10px;
+	-padding-bottom: 10px;
 	background-color: @white;
 	outline: none;
 	border: none;
@@ -17,6 +19,39 @@
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	letter-spacing: 0.3em;
+	letter-spacing: 0.1em;
 	cursor: pointer;
+
+	&::before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+}
+
+	.btn-default {
+		display: inline-block;
+	}
+	.btn-hover {
+		display: none;
+	}
+
+	.btn-error {
+		display: none;
+	}
+
+	.btn-img {
+		vertical-align: middle;
+	}
+
+	&:hover {
+		.btn-default {
+			display: none;			
+		}
+
+		.btn-hover {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
 }

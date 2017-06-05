@@ -2,10 +2,29 @@
 	width: 100%;
 	height: @slider-height; //check !!!
 	-font-size: 0;
+	-overflow-y: visible;
 }
 
 .slider__item {
+	position: relative;
 	height: @slider-height;
+	-padding-left: @padding-sides;
+	-padding-right: @padding-sides;
+	-overflow-y: visible;
+
+	background-color: grey;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.slider__item-text-block {
+		position: absolute;
+		width: 35%;
+		max-width: 600px;
+		right: 5%;
+		margin-top: 20%;
+		text-align: right;
+		z-index: 2000;
+	}
 
 	.slider__item-header {
 		.out-paddings();
@@ -14,35 +33,95 @@
 			@size: 50px; 
 			@line-height: 60px; 
 			@color: @white);//check!!!!
+
+		
+		margin-top: 60px;
+		margin-bottom: 60px;
+		
 	}
 
 	.slider__item-text {
 		.out-paddings();
 		.fonts(@family: 'Open Sans'; 
 			@weight: normal; 
-			@size: 30px; 
-			@line-height: 40px; 
+			@size: 18px; 
+			@line-height: 25px; 
 			@color: @white);//check!!!!
+
+		margin-bottom: 90px;
+		text-align: left;
 	}
 
-	&--one {
-		background-color: grey;
-		background-image: url(../../img/slider-1-bg.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
+	.slider__btn-block {
+		font-size: 0;
 	}
 
-	&--two {
-		background-color: grey;
-		background-image: url(../../img/slider-2-bg.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
+	.slider__btn {
+
+		&--know-more {
+			margin-right: 30px;
+			background-color: @white-op-25;
+			border: 1px solid @white;
+			color: white;
+		}
+		
 	}
 
-	&--three {
-		background-color: grey;
-		background-image: url(../../img/slider-3-bg.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
+	.slider__picture {
+		position: absolute;
+		display: block;
+		left: 0;
+		bottom: 0;
+		z-index: 1000;
+
+		&--over {
+			width: 15%;
+			left: 22.7%;
+			bottom: -5%;
+		}
 	}
+
+	&--one {		
+		background-image: url(../img/slider-1-bg.jpg);
+		
+	}
+
+	&--two {				
+		background-image: url(../img/slider-2-bg.jpg);
+		
+		.slider__item-text-block {
+			left: 5%;
+			margin-top: 15%;
+			text-align: left;
+		}
+
+		.slider__item-header {
+			color: @grey-font-2;
+		}
+
+		.slider__item-text {
+			color: @grey-font;
+		}
+
+		.slider__btn {
+			border: none;
+			background-color: @green-light;
+			color: @white;
+
+			&--order {
+				background-color: @orange-pale;
+			}
+		}
+	}
+
+	&--three {		
+		background-image: url(../img/slider-3-bg.jpg);
+		
+		.slider__picture {
+			width: 55%;
+			left: @padding-sides;
+		}
+	}
+
+	
 }

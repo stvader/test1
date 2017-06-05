@@ -1,8 +1,6 @@
 .main-nav {
 	position: fixed;
-	width: 100%;
-	padding-top: 17px;
-	padding-bottom: 17px;
+	width: 100%;	
 	padding-left: @padding-sides;
 	padding-right: @padding-sides;
 	box-sizing: border-box;
@@ -22,15 +20,24 @@
 
 	&--language {
 		float: right;
-		margin-top: -42px;
+		margin-top: -(@menu-heigh);		
 	}
 }
 
 .main-nav__item {
 	display: inline-block;
+	height: @menu-heigh;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	box-sizing: border-box;
+	cursor: pointer;
 	
 	&:not(:last-child) {
 		margin-right: 40px;
+	}
+
+	&:hover .main-nav__link {
+		color: @white;
 	}
 }
 
@@ -43,16 +50,30 @@
 
 	text-decoration: none;
 	text-transform: uppercase;
+	
+}
 
-	&:hover {
-		color: @white;
-	}
+.main-nav__link--lang {
+	padding-left: 20px; //for more squre for hover
 
-	&--lang {
-		display: block;
-		width: 21px;
-		height: 21px;
-
+	&::before {
+		display: inline-block;
+	    height: 100%;
+	    vertical-align: middle;
+	    content: "";
 	}
 }
 
+.main-nav__image-lang {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.main-nav__submenu {
+	display: none;
+
+}
+
+.main-nav__item:hover .main-nav__submenu {
+	display: block;
+}

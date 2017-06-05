@@ -1,8 +1,8 @@
-1) high of slider
-2) maybe cut new bgc for 3rd slide
-3) check all fonts!!!!!!!!
+1) high of slider +
+2) maybe cut new bgc for 3rd slide +
+3) check all fonts!!!!!!!! +
 4) DINO PAW!!! padding bottom
-5) slide 2 & 3 text block margins
+5) slide 2 & 3 text block margins +
 6) mennu fix + menu scroll
 7) do submenu
-8) cut new flags
+8) cut new flags +

@@ -13,7 +13,12 @@
 </head>
 <body>
 	<header class="page-header">
-		<nav class="main-nav">
+		<nav class="main-nav main-nav--scroll">
+			<div class="main-nav__logo">
+				<a href="index.html" class="logo-link">
+					<img src="img/aet_logo_rus_horizontal.png" alt="EAT Logotype" class="logo-image">
+				</a>
+			</div>
 			<ul class="main-nav__list main-nav__list--main">
 				<li class="main-nav__item">
 					<a href="#products" class="main-nav__link">
@@ -30,7 +35,7 @@
 						Реализованные проекты
 					</a>
 				</li>
-				<li class="main-nav__item">
+				<li class="main-nav__item main-nav__item--contain-submenu">
 					<a href="" class="main-nav__link">
 						Интересное
 					</a>
@@ -65,20 +70,43 @@
 								ЧаВо
 							</a>
 						</li>
-					</ul>
+					</ul>					
 				</li>
 				<li class="main-nav__item">
 					<a href="" class="main-nav__link">
 						О компании
 					</a>
 				</li>
+				<div class="main-nav__submenu-bg"></div>
 			</ul>
 			<ul class="main-nav__list main-nav__list--language">
-				<li class="main-nav__item">
+				<li class="main-nav__item main-nav__item--contain-submenu11">
 					<a href="" class="main-nav__link main-nav__link--lang">
-						<img src="img/flag-russia.svg" alt="RU" class="main-nav__image-lang main-nav__image-lang--ru">
+						<img src="img/flag-russia.png" alt="RU" class="main-nav__image-lang main-nav__image-lang--ru">
 					</a>
 				</li>
+				<div class="main-nav__submenu-bg main-nav__submenu-bg--language">
+					<h5 class="main-menu__submenu-lang-text">
+						Change Language
+					</h5>
+					<ul class="main-menu__submenu-lang-list">
+						<li class="main-menu__submenu-lang-item">
+							<a href="" class="main-menu__submenu-lang-link">
+								<img src="img/flag-france.png" alt="France" class="main-menu__submenu-lang-image">
+							</a>
+						</li>
+						<li class="main-menu__submenu-lang-item">
+							<a href="" class="main-menu__submenu-lang-link">
+								<img src="img/flag-uk.png" alt="United Kingdom" class="main-menu__submenu-lang-image">
+							</a>
+						</li>
+						<li class="main-menu__submenu-lang-item">
+							<a href="" class="main-menu__submenu-lang-link">
+								<img src="img/flag-china.svg" alt="China" class="main-menu__submenu-lang-image">
+							</a>
+						</li>
+					</ul>
+				</div>
 			</ul>
 		</nav>
 

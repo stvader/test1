@@ -110,13 +110,16 @@ input {
   padding-left: 5%;
   padding-right: 5%;
   box-sizing: border-box;
-  z-index: 8000;
+  z-index: 10000;
   background-color: rgba(0, 0, 0, 0.51);
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   text-align: center;
 }
 .main-nav:hover {
   background-color: rgba(0, 0, 0, 0.4);
+}
+.main-nav__logo {
+  display: none;
 }
 .main-nav__list {
   margin: 0;
@@ -126,20 +129,25 @@ input {
   font-size: 0;
 }
 .main-nav__list--language {
+  position: relative;
   float: right;
   margin-top: -70px;
 }
 .main-nav__item {
+  position: relative;
   display: inline-block;
   height: 70px;
   box-sizing: border-box;
   cursor: pointer;
 }
-.main-nav__item:not(:last-child) {
+.main-nav__item:not(:last-of-type) {
   margin-right: 40px;
 }
-.main-nav__item::before,
-.main-nav__item::after {
+.main-nav__item:hover .main-nav__link {
+  color: #ffffff;
+}
+.main-nav__item--contain-submenu:hover::before,
+.main-nav__item--contain-submenu:hover::after {
   content: "";
   position: absolute;
   top: 70px;
@@ -148,10 +156,13 @@ input {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 8px solid rgba(255, 255, 255, 0.6);
+  border-top: 6px solid rgba(255, 255, 255, 0.6);
+  z-index: 8000;
 }
-.main-nav__item:hover .main-nav__link {
-  color: #ffffff;
+.main-nav__item--contain-submenu:hover::after {
+  top: 68px;
+  border-top: 6px solid rgba(0, 0, 0, 0.51);
+  z-index: 11000;
 }
 .main-nav__link {
   font-family: 'Open Sans Bold';
@@ -163,7 +174,7 @@ input {
   text-transform: uppercase;
 }
 .main-nav__link--lang {
-  padding-left: 20px;
+  width: 23px;
 }
 .main-nav__link--lang::before {
   display: inline-block;
@@ -174,22 +185,24 @@ input {
 .main-nav__image-lang {
   display: inline-block;
   vertical-align: middle;
+  opacity: 0.5;
+}
+.main-nav__image-lang:hover {
+  opacity: 1;
 }
 .main-nav__submenu {
   margin: 0;
   padding: 0;
-  display: block;
-  width: 100%;
+  display: none;
+  width: 550px;
   position: absolute;
   top: 70px;
-  left: 0;
-  z-index: 7000;
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  left: -200px;
+  z-index: 8000;
   box-sizing: border-box;
-  background-color: rgba(67, 66, 66, 0.8);
 }
 .main-nav__submenu--interesting {
-  padding-left: 27%;
+  -padding-left: 370px;
 }
 .main-nav__submenu-item {
   display: inline-block;
@@ -209,9 +222,78 @@ input {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
-/*.main-nav__item:hover .main-nav__submenu {
-	-display: block;
-}*/
+.main-nav__submenu-bg {
+  display: none;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 7000;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  background-color: rgba(67, 66, 66, 0.8);
+}
+.main-nav__submenu-bg--language {
+  width: 485px;
+  height: 95px;
+  left: -460px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.main-menu__submenu-lang-text,
+.main-menu__submenu-lang-list {
+  -display: inline-block;
+  -vertical-align: top;
+  -font-size: 0;
+}
+.main-menu__submenu-lang-text {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 95px;
+  color: rgba(255, 255, 255, 0.6);
+  float: left;
+  text-transform: uppercase;
+}
+.main-menu__submenu-lang-list {
+  margin: 0;
+  padding: 0;
+  float: right;
+  font-size: 0;
+}
+.main-menu__submenu-lang-item {
+  display: inline-block;
+  height: 95px;
+}
+.main-menu__submenu-lang-item:not(:last-child) {
+  margin-right: 30px;
+}
+.main-menu__submenu-lang-item::before {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+.main-menu__submenu-lang-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-nav__item:hover .main-nav__submenu {
+  display: block;
+}
+.main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg {
+  display: block;
+}
+.main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg--language {
+  display: none;
+}
+.main-nav--scroll .main-nav__logo {
+  display: block;
+  float: left;
+}
 /* Slider */
 .slick-slider {
   position: relative;

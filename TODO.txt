@@ -6,3 +6,4 @@
 6) mennu fix + menu scroll
 7) do submenu
 8) cut new flags +
+9) do flag menu

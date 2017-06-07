@@ -6,6 +6,7 @@
 	<title>Test Page</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/js-main.js"></script>
 	<script src="js/jquery/jquery-1.x-git.min.js"></script>
 	<script src="js/jquery/jquery-migrate-3.0.0.min.js"></script>
 	<script type="text/javascript" src="js/slick/slick.min.js"></script>
@@ -13,7 +14,7 @@
 </head>
 <body>
 	<header class="page-header">
-		<nav class="main-nav main-nav--scroll">
+		<nav class="main-nav">
 			<div class="main-nav__logo">
 				<a href="index.html" class="logo-link">
 					<img src="img/aet_logo_rus_horizontal.png" alt="EAT Logotype" class="logo-image">
@@ -79,15 +80,15 @@
 				</li>
 				<div class="main-nav__submenu-bg"></div>
 			</ul>
-			<ul class="main-nav__list main-nav__list--language">
-				<li class="main-nav__item main-nav__item--contain-submenu11">
-					<a href="" class="main-nav__link main-nav__link--lang">
+			<ul class="main-nav__list main-nav__list--language js-trigger-parent">
+				<li class="main-nav__item">
+					<a href="" class="main-nav__link main-nav__link--lang js-show-link">
 						<img src="img/flag-russia.png" alt="RU" class="main-nav__image-lang main-nav__image-lang--ru">
 					</a>
 				</li>
-				<div class="main-nav__submenu-bg main-nav__submenu-bg--language">
+				<div class="main-nav__submenu-bg main-nav__submenu-bg--language js-hidden-block">
 					<h5 class="main-menu__submenu-lang-text">
-						Change Language
+						Change The Language
 					</h5>
 					<ul class="main-menu__submenu-lang-list">
 						<li class="main-menu__submenu-lang-item">
@@ -140,12 +141,12 @@
 							</a>
 						</div>
 					</div>
-					<div class="slider__picture">
-						<img src="img/dino-main.png" alt="dino" class="slider__image">
-					</div>
-					<div class="slider__picture slider__picture--over">
-						<img src="img/dino-paws.png" alt="dino" class="slider__image">
-					</div>
+					<div class="slider__picture slider__picture--over11">
+						<img src="img/dino-main.png" alt="Dino" class="slider__image">
+						<div class="slider__picture slider__picture--over">
+							<img src="img/dino-paws.png" alt="Dino" class="slider__image">
+						</div>
+					</div>					
 				</div>
 				<div class="slider__item slider__item--two">
 					<div class="slider__item-text-block">
@@ -175,7 +176,7 @@
 						</div>
 					</div>
 					<div class="slider__picture">
-						<img src="img/arm-chair.png" alt="" class="slider__image">
+						<img src="img/arm-chair.png" alt="Armchair" class="slider__image">
 					</div>
 				</div>
 				<div class="slider__item slider__item--three">
@@ -207,7 +208,7 @@
 						</div>
 					</div>
 					<div class="slider__picture">
-						<img src="img/chidren.png" alt="" class="slider__image">
+						<img src="img/chidren.png" alt="Children" class="slider__image">
 					</div>
 				</div>
 			</div>

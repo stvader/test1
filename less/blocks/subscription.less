@@ -52,7 +52,7 @@
 		@color: @white);
 
 	display: inline-block;
-	width: 525px;
+	width: 40%; //525px
 	height: 40px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -71,7 +71,8 @@
 	}
 }
 
-.form-text-input:invalid + .form-submit {
+.form-text-input:invalid + .form-submit,
+.submit-error {
 	.btn-default {
 		display: none;
 	}
@@ -87,6 +88,4 @@
 		}
 	}
 }
-
-
 

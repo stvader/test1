@@ -1,6 +1,7 @@
 .slider__wrapper {
 	width: 100%;
 	height: @slider-height;
+	//height: (@slider-height + @slider-pb-over);
 	-font-size: 0;
 	-overflow-y: visible;
 }
@@ -8,13 +9,14 @@
 .slider__item {
 	position: relative;
 	height: @slider-height;
-	-padding-left: @padding-sides;
-	-padding-right: @padding-sides;
-	-overflow-y: visible;
+	//height: (@slider-height + @slider-pb-over);
+	padding-bottom: @slider-pb-over;
+	box-sizing: content-box;
 
-	background-color: grey;
+	background-color: @white;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-origin: content-box;
 
 	.slider__item-blackot {
 		position: absolute;
@@ -82,13 +84,13 @@
 		position: absolute;
 		display: block;
 		left: 0;
-		bottom: 0;
+		bottom: @slider-pb-over;
 		z-index: 1000;
 
 		&--over {
 			width: 15%;
 			left: 22.7%;
-			bottom: -5%;
+			top: 86%;
 		}
 	}
 

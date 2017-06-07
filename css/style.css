@@ -132,8 +132,11 @@ input {
   position: relative;
   float: right;
   margin-top: -70px;
+  margin-left: -23px;
 }
 .main-nav__item {
+  margin: 0;
+  padding: 0;
   position: relative;
   display: inline-block;
   height: 70px;
@@ -172,6 +175,10 @@ input {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   text-transform: uppercase;
+}
+.main-nav__image-lang {
+  margin: 0;
+  padding: 0;
 }
 .main-nav__link--lang {
   width: 23px;
@@ -241,12 +248,6 @@ input {
   padding-left: 70px;
   padding-right: 70px;
 }
-.main-menu__submenu-lang-text,
-.main-menu__submenu-lang-list {
-  -display: inline-block;
-  -vertical-align: top;
-  -font-size: 0;
-}
 .main-menu__submenu-lang-text {
   margin: 0;
   padding: 0;
@@ -290,9 +291,45 @@ input {
 .main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg--language {
   display: none;
 }
+.main-nav--scroll {
+  background-color: #ffffff;
+  /*.logo-image {
+		display: inline-block;
+		vertical-align: middle;	
+	}*/
+}
+.main-nav--scroll:hover {
+  background-color: #ffffff;
+}
 .main-nav--scroll .main-nav__logo {
   display: block;
   float: left;
+  width: 220px;
+  height: 70px;
+  padding-top: 10px;
+  margin-right: -220px;
+  box-sizing: border-box;
+  /*&::before {
+			display: inline-block;		
+		    height: 100%;
+		    vertical-align: middle;
+		    content: "";
+		}*/
+}
+.main-nav--scroll .main-nav__item--contain-submenu:hover::before {
+  border-top-color: #ffffff;
+}
+.main-nav--scroll .main-nav__item--contain-submenu:hover::after {
+  border: none;
+}
+.main-nav--scroll .main-nav__item:hover .main-nav__link {
+  color: #434242;
+}
+.main-nav--scroll .main-nav__link {
+  color: rgba(67, 66, 66, 0.6);
+}
+.main-nav--scroll .main-nav__submenu-bg {
+  background-color: #434242;
 }
 /* Slider */
 .slick-slider {

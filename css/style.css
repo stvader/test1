@@ -154,7 +154,7 @@ input {
   content: "";
   position: absolute;
   top: 70px;
-  left: calc(50% - 5px);
+  right: calc(50% - 5px);
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -913,7 +913,54 @@ input {
     font-size: 0.8px;
   }
   .main-nav__list--main{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+  }
+  .main-nav__list--main .main-nav__item{
+    display: block;
+    margin-right: 0;
+    padding-right: calc(5% + 20px);
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+  .main-nav__list--main .main-nav__item--contain-submenu:hover .main-nav__submenu,
+  .main-nav__list--main .main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg,
+  .main-nav__list--main .main-nav__item--contain-submenu:hover::before,
+  .main-nav__list--main .main-nav__item--contain-submenu:hover::after{
     display: none;
+  }
+  .main-nav__list--main .main-nav__item--contain-submenu{
+    position: relative;
+  }
+  .main-nav__list--main .main-nav__item--contain-submenu::after{
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 5%;
+    -left: calc(100% - 40px);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid rgba(255, 255, 255, 0.6);
+    z-index: 12000;
+  }
+  .main-nav__list--main .main-nav__item--contain-submenu:hover::after{
+    display: block;
+    border-top-color: #ffffff;
+  }
+  .main-nav__list--main .main-nav__item--submenu-show .main-nav__submenu,
+  .main-nav__list--main .main-nav__item--submenu-show:hover .main-nav__submenu{
+    display: block;
+  }
+  .main-nav__list--main .main-nav__item--submenu-show .main-nav__submenu-item{
+    display: block;
+  }
+  .main-nav__list--main .main-nav__item--submenu-show::after{
+    transform: rotate(180deg);
   }
   .main-nav__list--language{
     margin-top: 0;
@@ -936,7 +983,7 @@ input {
     background-color: transparent;
     cursor: pointer;
   }
-  .main-nav--closed .main-nav__wrapper{
+  .main-nav--closed .main-nav__list--main{
     display: none;
   }
   .main-nav--closed .main-nav__toggle::before{
@@ -954,7 +1001,7 @@ input {
     background-color: #ffffff;
     box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
   }
-  .main-nav--opened .main-nav__wrapper{
+  .main-nav--opened .main-nav__list--main{
     display: block;
   }
   .main-nav--opened .main-nav__toggle::before,
@@ -979,6 +1026,45 @@ input {
   .main-nav--opened .main-nav__toggle:hover::after,
   .main-nav--opened .main-nav__toggle:active::after{
     background-color: #ffffff;
+  }
+  .main-nav--scroll{
+    /*.main-nav__toggle {
+				&::before,
+				&::after {
+					background-color: @black-op-60;
+				}
+
+				&:hover::before,
+				&:active::before,
+				&:hover::after,
+				&:active::after {
+					background-color: @black;
+				}
+			}*/
+  }
+  .main-nav--scroll .main-nav__toggle::before,
+  .main-nav--scroll .main-nav__toggle::after{
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .main-nav--scroll .main-nav__toggle::before{
+    box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.6), 0 16px 0 0 rgba(0, 0, 0, 0.6);
+  }
+  .main-nav--scroll .main-nav__toggle:hover::before,
+  .main-nav--scroll .main-nav__toggle:active::before,
+  .main-nav--scroll .main-nav__toggle:hover::after,
+  .main-nav--scroll .main-nav__toggle:active::after{
+    background-color: #000000;
+  }
+  .main-nav--scroll .main-nav__toggle:hover::before,
+  .main-nav--scroll .main-nav__toggle:active::before{
+    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  }
+  .main-nav--opened .main-nav__toggle::before{
+    box-shadow: none;
+  }
+  .main-nav--opened .main-nav__toggle:hover::before,
+  .main-nav--opened .main-nav__toggle:active::before{
+    box-shadow: none;
   }
   .slider__wrapper{
     height: 600px;

@@ -1,10 +1,2 @@
-1) flex main-nav +
-2) check all fonts in scrolling menu +
-3) mennu fix + menu scroll+
-4) JS click language +
-5) JS scroll menu +
-6) adaptation
-7) dinopaws padding+
-8) js button submit +
-9) fonts rem +
-10) begin from button mobile menu
+1) adaptation
+2) begin from submenu

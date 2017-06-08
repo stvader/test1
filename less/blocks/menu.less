@@ -61,7 +61,7 @@
 			content: "";
 			position: absolute;
 			top: @menu-heigh;
-			left: calc(~"50% - 5px");
+			right: calc(~"50% - 5px");
 			width: 0;
 			height: 0;
 			border-left: 5px solid transparent;
@@ -307,7 +307,66 @@
 @media @tablet-width {
 	.main-nav__list {
 		&--main {
-			display: none;	
+			position: absolute;
+			top: @menu-heigh;
+			left: 0;
+			right: 0;
+			width: 100%;
+			text-align: right;
+
+			.main-nav__item	{
+				display: block;
+				margin-right: 0;
+				padding-right: calc(~"5% + 20px");
+				background-color: @black-op-95;
+
+				&--contain-submenu:hover .main-nav__submenu,
+				&--contain-submenu:hover ~ .main-nav__submenu-bg,
+				&--contain-submenu:hover::before,
+				&--contain-submenu:hover::after {
+					display: none;
+				}
+
+				&--contain-submenu {
+					position: relative;
+
+					&::after {
+						content: "";
+						position: absolute;
+						top: 32px;
+						right: 5%;
+						-left: calc(~"100% - 40px");
+						width: 0;
+						height: 0;
+						border-left: 5px solid transparent;
+						border-right: 5px solid transparent;
+						border-top: 6px solid @white-op-60;
+						z-index: 12000;
+					}
+
+					&:hover::after {
+						display: block;						
+						border-top-color: @white;
+					}
+				}
+
+				&--submenu-show {
+					.main-nav__submenu,
+					&:hover .main-nav__submenu {
+						display: block;
+						
+					}					
+
+					.main-nav__submenu-item {
+						display: block;
+					}
+
+					&::after {
+						transform: rotate(180deg);
+					}
+				}
+				
+			}
 		}
 
 		&--language {
@@ -336,8 +395,10 @@
 	}
 
 	.main-nav--closed {
-		.main-nav__wrapper {//
-			display: none;
+		.main-nav__list {
+			&--main {
+				display: none;	
+			}
 		}
 
 		.main-nav__toggle {
@@ -365,8 +426,10 @@
 	}
 
 	.main-nav--opened {
-		.main-nav__wrapper {
-			display: block;
+		.main-nav__list {
+			&--main {
+				display: block;	
+			}
 		}
 
 		.main-nav__toggle {
@@ -402,7 +465,59 @@
 	}
 
 	.main-nav--scroll {
-		
+		//.main-nav--closed {
+			.main-nav__toggle {
+				&::before,
+				&::after {
+					background-color: @black-op-60;
+				}
+
+				&::before {
+					box-shadow: 0 8px 0 0 @black-op-60,
+								0 16px 0 0 @black-op-60;
+				}
+
+				&:hover::before,
+				&:active::before,
+				&:hover::after,
+				&:active::after {
+					background-color: @black;
+					
+				}
+
+				&:hover::before,
+				&:active::before {
+					box-shadow: 0 8px 0 0 @black,
+								0 16px 0 0 @black;
+				}
+			}
+		//}
+
+		//.main-nav--opened {
+			/*.main-nav__toggle {
+				&::before,
+				&::after {
+					background-color: @black-op-60;
+				}
+
+				&:hover::before,
+				&:active::before,
+				&:hover::after,
+				&:active::after {
+					background-color: @black;
+				}
+			}*/
+		//}
 	}
-	
+
+	.main-nav--opened .main-nav__toggle{
+		&::before {
+			box-shadow: none;
+		}
+
+		&:hover::before,
+		&:active::before {
+			box-shadow: none;
+		}
+	}  //for bug with box-shadow	
 }

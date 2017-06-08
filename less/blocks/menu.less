@@ -1,6 +1,7 @@
 .main-nav {
 	position: fixed;
-	width: 100%;	
+	width: 100%;
+	height: 70px;		
 	padding-left: @padding-sides;
 	padding-right: @padding-sides;
 	box-sizing: border-box;
@@ -30,7 +31,7 @@
 		position: relative;
 		float: right;
 		margin-top: -(@menu-heigh);
-		margin-left: -23px;
+		-margin-left: -23px;
 	}
 }
 
@@ -110,7 +111,8 @@
 	vertical-align: middle;
 	opacity: 0.5;
 
-	&:hover {
+	&:hover,
+	&--active {
 		opacity: 1;
 	}
 }
@@ -126,11 +128,7 @@
 	z-index: 8000;
 	box-sizing: border-box;		
 
-	&--interesting {
-		-padding-left: 370px;
-	}
-
-	
+		
 }
 
 .main-nav__submenu-item {
@@ -229,7 +227,7 @@
 }
 
 .main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg--language {
-	display: none;//may delete
+	display: none;//maybe delete
 }
 
 .main-nav--scroll {
@@ -286,4 +284,125 @@
 
 .js-vision {
 	display: block;
+}
+
+.main-nav__toggle {
+	display: none;
+}
+
+@media (max-width: 1350px) {
+	.main-nav--scroll {
+		text-align: right;
+
+		.main-nav__list--main {
+			margin-right: 5%;
+		}
+
+		.main-nav__submenu {
+			left: -260%;
+		}
+	}
+}
+
+@media @tablet-width {
+	.main-nav__list {
+		&--main {
+			display: none;	
+		}
+
+		&--language {
+			margin-top: 0;
+		}
+	}
+
+	.main-nav__toggle {
+		.out-paddings();
+
+		position: relative;
+		-top: 20px;
+		-right: 25px;
+		float: right;
+		z-index: 15000;
+
+		display: block;
+		width: 20px;
+		height: 20px;
+		margin-top: 27px;
+		margin-left: 25px;
+		border: 0;
+		outline: 0;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	.main-nav--closed {
+		.main-nav__wrapper {//
+			display: none;
+		}
+
+		.main-nav__toggle {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -5px;
+
+				width: 30px;
+				height: 2px;
+
+				background-color: @white-op-50;
+				box-shadow: 0 8px 0 0 @white-op-50,
+							0 16px 0 0 @white-op-50;
+			}
+
+			&:hover::before,
+			&:active::before {
+				background-color: @white;
+				box-shadow: 0 8px 0 0 @white,
+							0 16px 0 0 @white;
+			}
+		}
+	}
+
+	.main-nav--opened {
+		.main-nav__wrapper {
+			display: block;
+		}
+
+		.main-nav__toggle {
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: 9px;
+				left: -4px;
+
+				width: 28px;
+				height: 2px;
+
+				background-color: @white-op-50;
+			}
+
+			&::before {
+				transform: rotate(45deg);
+				box-shadow: none;
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+
+			&:hover::before,
+			&:active::before,
+			&:hover::after,
+			&:active::after {
+				background-color: @white;
+			}
+		}
+	}
+
+	.main-nav--scroll {
+		
+	}
+	
 }

@@ -42,6 +42,7 @@ window.addEventListener('load', function() {
 		var parentBlock = this.closest('.js-trigger-parent');
 		var aimBlock = parentBlock.querySelector('.js-hidden-block');
 		var navItem = this.closest('.main-nav__item');
+		var image = this.querySelector('.main-nav__image-lang');
 
 		if (!aimBlock.classList.contains('js-vision')) {
 			aimBlock.classList.add('js-vision');
@@ -53,8 +54,10 @@ window.addEventListener('load', function() {
 
 		if (aimBlock.classList.contains('js-vision')) {
 			navItem.classList.add('main-nav__item--arrow');
+			image.classList.add('main-nav__image-lang--active');
 		} else {
 			navItem.classList.remove('main-nav__item--arrow');
+			image.classList.remove('main-nav__image-lang--active');
 		}
 		
 	}
@@ -67,7 +70,18 @@ window.addEventListener('load', function() {
 
 window.addEventListener('load', function() {
 	var heightForChange = 930;
+	var tabletWidth = 1150;
+	var mobileWidth = 768;
+	var clientWidth = document.documentElement.clientWidth;
 	var nav = document.querySelector('.main-nav');
+
+	if (clientWidth < mobileWidth) {
+		heightForChange = 500;
+	}else if (clientWidth < tabletWidth) {
+		heightForChange = 600;
+	}
+
+
 
 	window.addEventListener('scroll', function() {		
 		if (!nav.classList.contains('main-nav--scroll') && window.pageYOffset >= heightForChange) {

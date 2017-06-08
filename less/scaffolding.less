@@ -8,6 +8,10 @@
 	src: url(../fonts/opensans.woff2);
 }
 
+html {
+	font-size: 1px;
+}
+
 body {	
 	font-family: Arial, sans-serif;
 	color: @black;
@@ -23,16 +27,18 @@ img {
 	vertical-align: bottom;
 }
 
-
-
-
-
-picture {
-	.out-paddings();
-	border: none;
-	border-style: none;
-}
-
 input {
 	outline: none;
+}
+
+@media @tablet-width {
+	html {
+		font-size: 0.8px;
+	}	
+}
+
+@media @mobile-width {
+	html {
+		font-size: 0.7px;
+	}
 }

@@ -1,6 +1,4 @@
 .page-product {
-	//.clearfix();
-
 	display: block;
 	width: 100%;
 	padding-top: 150px;
@@ -16,8 +14,8 @@
 	.out-paddings();
 	.fonts(@family: 'Noto Serif'; 
 		@weight: normal; 
-		@size: 50px; 
-		@line-height: 60px; 
+		@size: 50rem; 
+		@line-height: 60rem; 
 		@color: @white);
 
 	width: 310px;
@@ -25,8 +23,6 @@
 	margin-left: auto;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	-padding-left: 25px;
-	-padding-right: 25px;
 	background-color: @green;
 	text-align: center;
 }
@@ -49,6 +45,7 @@
 }
 
 .product__item {
+	max-height: 270px;
 	min-height: 150px;
 	margin-top: 80px;
 
@@ -116,11 +113,12 @@
 	.out-paddings();
 	.fonts(@family: 'Open Sans'; 
 		@weight: bold; 
-		@size: 18px; 
-		@line-height: 20px; 
+		@size: 18rem; 
+		@line-height: 20rem; 
 		@color: @green-dark);
 
-	margin-bottom: 30px;	
+	max-height: 16px;
+	margin-bottom: 30px;		
 	text-transform: uppercase;
 
 	&:hover,
@@ -133,8 +131,8 @@
 	.out-paddings();
 	.fonts(@family: 'Open Sans'; 
 		@weight: normal; 
-		@size: 18px; 
-		@line-height: 30px; 
+		@size: 18rem; 
+		@line-height: 30rem; 
 		@color: @grey-font);
 
 	margin-left: 185px;
@@ -143,8 +141,8 @@
 .product__direct-link {
 	.fonts(@family: 'Open Sans'; 
 		@weight: normal; 
-		@size: 18px; 
-		@line-height: 30px; 
+		@size: 18rem; 
+		@line-height: 30rem; 
 		@color: @grey-font);
 
 	text-decoration: none;
@@ -154,3 +152,58 @@
 	}
 }
 
+@media @tablet-width {
+	.page-product {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.product__item {
+		-height: 350px;
+	}
+
+	.product__picture {
+		-float: none;
+	}
+}
+
+@media (max-width: 1000px) {
+	.product__list {
+		float: none;
+		width: 100%;
+	}
+
+	.product__item {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 590px) {
+	.product__header {
+		width: 250px;
+	}
+
+	.page-product {
+		text-align: center;
+	}
+
+	.product__item {
+		max-height: none;
+		
+	}
+
+	.product__picture {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.product__name {
+		margin-top: 30px;
+	}
+
+	.product__descr {
+		margin-left: 0;
+		text-align: left;
+	}
+}

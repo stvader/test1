@@ -14,14 +14,14 @@
 </head>
 <body>
 	<header class="page-header">
-		<nav class="main-nav main-nav--opened">
+		<nav class="main-nav main-nav--closed js-mobile-nav-toggle">
 			<div class="main-nav__logo">
 				<a href="index.html" class="logo-link">
 					<img src="img/aet_logo_rus_horizontal.png" alt="EAT Logotype" class="logo-image">
 				</a>
 			</div>
 			<button class="main-nav__toggle" type="button"></button>
-			<ul class="main-nav__list main-nav__list--main">
+			<ul class="main-nav__list main-nav__list--main js-hidden-menu">
 				<li class="main-nav__item">
 					<a href="#products" class="main-nav__link">
 						Продукты
@@ -37,11 +37,11 @@
 						Реализованные проекты
 					</a>
 				</li>
-				<li class="main-nav__item main-nav__item--contain-submenu main-nav__item--submenu-show">
+				<li class="main-nav__item main-nav__item--contain-submenu  js-has-submenu">
 					<a href="" class="main-nav__link">
 						Интересное
 					</a>
-					<ul class="main-nav__submenu main-nav__submenu--interesting">
+					<ul class="main-nav__submenu">
 						<li class="main-nav__submenu-item">
 							<a href="" class="main-nav__submenu-link">
 								Акции	
@@ -81,7 +81,7 @@
 				</li>
 				<div class="main-nav__submenu-bg"></div>
 			</ul>
-			<ul class="main-nav__list main-nav__list--language js-trigger-parent">
+			<ul class="main-nav__list main-nav__list--language js-toggle-parent">
 				<li class="main-nav__item">
 					<a href="" class="main-nav__link main-nav__link--lang js-show-link">
 						<img src="img/flag-russia.png" alt="RU" class="main-nav__image-lang main-nav__image-lang--ru">
@@ -143,7 +143,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="slider__picture slider__picture--over11">
+					<div class="slider__picture">
 						<img src="img/dino-main.png" alt="Dino" class="slider__image">
 						<div class="slider__picture slider__picture--over">
 							<img src="img/dino-paws.png" alt="Dino" class="slider__image">

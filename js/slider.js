@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var sliderImage = $('.slider__item');
 
     slider.slick({
-    	autoplay: false,
+    	autoplay: true,
     	autoplaySpeed: 5000,
     	arrows: false,
     	dots: false,

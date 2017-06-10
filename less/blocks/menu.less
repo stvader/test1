@@ -37,7 +37,7 @@
 .main-nav__item {
 	.out-paddings();
 
-	position: relative;
+	-position: relative;
 	display: inline-block;
 	height: @menu-heigh;	
 	box-sizing: border-box;
@@ -155,7 +155,7 @@
 	text-decoration: none;
 }
 
-.main-nav__submenu-bg {
+.main-nav__submenu-bg { ///////////////////////////////////////////////
 	display: none;
 	width: 100%;
 	height: @submenu-height;
@@ -167,7 +167,7 @@
 	box-sizing: border-box;
 	background-color: @grey-op;
 
-	&--language {
+	&--language {///////////////////////////
 		width: 485px;
 		height: @submenu-language-height;
 		left: -460px;
@@ -221,11 +221,11 @@
 	display: block;
 }
 
-.main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg {
+.main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg { ////////////////
 	display: block;
 }
 
-.main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg--language {
+.main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg--language {//////////
 	display: none;
 }
 
@@ -272,10 +272,10 @@
 		color: @grey-op-60;				
 	}	
 
-	.main-nav__submenu-bg {
+	.main-nav__submenu-bg { /////////////////
 		background-color: @grey-font;
 
-		&--language {
+		&--language {//////////////////////
 			border: none;
 		}
 	}
@@ -326,7 +326,7 @@
 				&--contain-submenu:hover ~ .main-nav__submenu-bg,
 				&--contain-submenu:hover::before,
 				&--contain-submenu:hover::after {
-					display: none;
+					display: none;///////////////////////////////
 				}
 
 				&--contain-submenu {
@@ -527,7 +527,7 @@
 }
 
 @media (max-width: 600px) {
-	.main-nav__submenu-bg {
+	.main-nav__submenu-bg {///////////////////////////////////
 		&--language {
 			width: 280px;
 			left: -200px;

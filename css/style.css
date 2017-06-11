@@ -128,9 +128,7 @@ input {
 .main-nav__item {
   margin: 0;
   padding: 0;
-  -position: relative;
   display: inline-block;
-  height: 70px;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -140,11 +138,24 @@ input {
 .main-nav__item:hover .main-nav__link {
   color: #ffffff;
 }
-.main-nav__item--contain-submenu:hover::before,
+.main-nav__link {
+  font-family: 'Open Sans Bold';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 70px;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  display: block;
+  height: 70px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.main-nav__item--contain-submenu:hover .main-nav__link::before,
+.main-nav__item--contain-submenu:hover .main-nav__link::after,
 .main-nav__item--arrow::before,
-.main-nav__item--contain-submenu:hover::after,
 .main-nav__item--arrow::after {
   content: "";
+  display: block;
   position: absolute;
   top: 70px;
   right: calc(50% - 5px);
@@ -153,29 +164,17 @@ input {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 6px solid rgba(255, 255, 255, 0.6);
-  z-index: 8000;
+  z-index: 10000;
 }
-.main-nav__item--contain-submenu:hover::after,
+.main-nav__item--contain-submenu:hover .main-nav__link::after,
 .main-nav__item--arrow::after {
   top: 68px;
-  border-top: 6px solid rgba(0, 0, 0, 0.51);
+  border-top: 6px solid rgba(0, 0, 0, 0.6);
   z-index: 11000;
-}
-.main-nav__link {
-  font-family: 'Open Sans Bold';
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 70px;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  text-transform: uppercase;
 }
 .main-nav__image-lang {
   margin: 0;
   padding: 0;
-}
-.main-nav__link--lang {
-  width: 23px;
 }
 .main-nav__link--lang::before {
   display: inline-block;
@@ -196,12 +195,17 @@ input {
   margin: 0;
   padding: 0;
   display: none;
-  width: 550px;
+  width: 100%;
   position: absolute;
   top: 70px;
-  left: -200px;
+  left: 0;
   z-index: 8000;
   box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: rgba(67, 66, 66, 0.8);
+}
+.main-nav__submenu--interesting {
+  padding-left: 370px;
 }
 .main-nav__submenu-item {
   display: inline-block;
@@ -221,25 +225,20 @@ input {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
-.main-nav__submenu-bg {
-  display: none;
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  z-index: 7000;
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
-  box-sizing: border-box;
-  background-color: rgba(67, 66, 66, 0.8);
-}
 .main-nav__submenu-bg--language {
+  display: none;
   width: 485px;
   height: 95px;
+  position: absolute;
+  top: 70px;
   left: -460px;
+  z-index: 7000;
   padding-left: 70px;
   padding-right: 70px;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0px 2px 7px 0px #000000;
+  box-sizing: border-box;
+  background-color: rgba(67, 66, 66, 0.8);
 }
 .main-menu__submenu-lang-text {
   margin: 0;
@@ -278,9 +277,6 @@ input {
 .main-nav__item:hover .main-nav__submenu {
   display: block;
 }
-.main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg {
-  display: block;
-}
 .main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg--language {
   display: none;
 }
@@ -300,25 +296,26 @@ input {
   margin-right: -220px;
   box-sizing: border-box;
 }
-.main-nav--scroll .main-nav__item--contain-submenu:hover::before,
-.main-nav--scroll .main-nav__item--arrow::before {
-  border-top-color: #ffffff;
-}
-.main-nav--scroll .main-nav__item--contain-submenu:hover::after,
-.main-nav--scroll .main-nav__item--arrow::after {
-  border: none;
-}
 .main-nav--scroll .main-nav__item:hover .main-nav__link {
   color: #434242;
 }
 .main-nav--scroll .main-nav__link {
   color: rgba(67, 66, 66, 0.6);
 }
-.main-nav--scroll .main-nav__submenu-bg {
+.main-nav--scroll .main-nav__item--contain-submenu:hover .main-nav__link::before,
+.main-nav--scroll .main-nav__item--arrow::before {
+  border-top-color: #ffffff;
+}
+.main-nav--scroll .main-nav__item--contain-submenu:hover .main-nav__link::after,
+.main-nav--scroll .main-nav__item--arrow::after {
+  border: none;
+}
+.main-nav--scroll .main-nav__submenu {
   background-color: #434242;
 }
 .main-nav--scroll .main-nav__submenu-bg--language {
   border: none;
+  background-color: #434242;
 }
 .js-vision {
   display: block;
@@ -918,10 +915,7 @@ input {
     margin-right: 0;
     padding-right: 10%;
   }
-  .main-nav__list--main .main-nav__item--contain-submenu:hover .main-nav__submenu,
-  .main-nav__list--main .main-nav__item--contain-submenu:hover ~ .main-nav__submenu-bg,
-  .main-nav__list--main .main-nav__item--contain-submenu:hover::before,
-  .main-nav__list--main .main-nav__item--contain-submenu:hover::after{
+  .main-nav__list--main .main-nav__item--contain-submenu:hover .main-nav__submenu{
     display: none;
   }
   .main-nav__list--main .main-nav__item--contain-submenu{
@@ -949,6 +943,7 @@ input {
     display: block;
     width: auto;
     margin-right: -15%;
+    padding-right: 15%;
     background-color: rgba(67, 66, 66, 0.8);
   }
   .main-nav__list--main .main-nav__item--submenu-show .main-nav__submenu-item{
@@ -958,8 +953,13 @@ input {
   .main-nav__list--main .main-nav__item--submenu-show::before{
     transform: rotate(180deg);
   }
+  .main-nav__list--main .main-nav__item--contain-submenu:hover .main-nav__link::before,
+  .main-nav__list--main .main-nav__item--contain-submenu:hover .main-nav__link::after{
+    display: none;
+  }
   .main-nav__list--language{
-    margin-top: 0;
+    width: 23px;
+    /*margin-top: 0; maybe it need for fix strange behivor of this block*/
   }
   .main-nav__toggle{
     margin: 0;

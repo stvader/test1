@@ -1,4 +1,0 @@
-1) div in ul x2
-2) products not 2 columns +
-3) max-height: 16px;  for headers +
-4) decoration strings as a tag

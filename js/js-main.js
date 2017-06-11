@@ -75,8 +75,6 @@ window.addEventListener('load', function() {
 		heightForChange = 600;
 	}
 
-
-
 	window.addEventListener('scroll', function() {		
 		if (!nav.classList.contains('main-nav--scroll') && window.pageYOffset >= heightForChange) {
 			nav.classList.add('main-nav--scroll');
